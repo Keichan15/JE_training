@@ -21,6 +21,7 @@
       <td>
         <%= book.body %>
       </td>
+      <td><%= render 'books/tag_list', tag_list: book.tag_list %></td>
       <% if book.favorited_by?(current_user) %>
       <td>
         <%= link_to book_favorites_path(book), class:"text-danger", method: :delete do %>
