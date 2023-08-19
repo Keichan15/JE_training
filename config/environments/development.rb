@@ -79,4 +79,18 @@ Rails.application.configure do
   config.hosts << "c7e48d53012745389635905b2084a42b.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "0a0b96d9dd4349caa506ce710af64c49.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "5f861e510bb84f3f900b708bd9d10643.vfs.cloud9.us-east-1.amazonaws.com"
+
+  host = 'localhost:3000'
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   address:              'smtp.gmail.com',
+   port:                  587,
+   domain:               'gmail.com',
+   user_name:            'katagawa.keisuke.infratop@gmail.com',
+   password:             'blhbduciqkbbcxdl',
+   authentication:       'plain',
+   enable_starttls_auto:  true
+  }
 end
