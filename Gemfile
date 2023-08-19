@@ -60,6 +60,10 @@ gem "net-pop"
 gem "net-imap"
 
 gem 'dotenv-rails'
-group :production do
-  gem 'mysql2'
-end
+# group :production do
+#   gem 'mysql2'
+# end
+
+# 1. devise日本語化用Gemの追加
+gem 'rails-i18n'
+gem 'devise-i18n'
