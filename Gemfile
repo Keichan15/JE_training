@@ -60,6 +60,6 @@ gem "net-pop"
 gem "net-imap"
 
 gem 'dotenv-rails'
-group :production do
-  gem 'mysql2'
-end
+# group :production do
+#   gem 'mysql2'
+# end
