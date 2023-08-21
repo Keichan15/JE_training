@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
 
+  def search
+    @q = User.ransack(params[:q])
+    @users = @q.result
+    @user = current_user
+    @book = Book.new
+    render :index
+  end
+
   def index
+    @q = User.ransack(params[:q])
     @users = User.all
     @user = current_user
     @book = Book.new

@@ -63,3 +63,6 @@ gem 'dotenv-rails'
 # group :production do
 #   gem 'mysql2'
 # end
+
+# ransack(検索機能用Gem)の導入
+gem 'ransack'
