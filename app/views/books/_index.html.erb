@@ -43,3 +43,10 @@
     <% end %>
   </tbody>
 </table>
+
+
+<div class="slider">
+  <% @books.each do |book| %>
+    <p><%= image_tag book.user.get_profile_image(100, 100), class: 'slider-item rounded' %></p>
+  <% end %>
+</div>
