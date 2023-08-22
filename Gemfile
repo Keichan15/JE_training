@@ -65,3 +65,5 @@ gem 'dotenv-rails'
 # end
 
 gem 'jp_prefecture'
+
+gem 'geocoder'

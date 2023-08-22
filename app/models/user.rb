@@ -66,6 +66,7 @@ class User < ApplicationRecord
   include JpPrefecture
   jp_prefecture :prefecture_code
 
+  # ヘルパーメソッドを追加
   def prefecture_name
     JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
   end
@@ -74,8 +75,12 @@ class User < ApplicationRecord
     self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
   end
 
+  # 住所を連結して表示するためのメソッド
   def join_address
     "#{self.prefecture_name}#{self.address_city}#{self.address_street}#{self.address_building}"
   end
+
+  geocoded_by :address_city
+  after_validation :geocode, if: :address_city_changed?
 
 end

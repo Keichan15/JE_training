@@ -42,6 +42,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :address_city
       t.string :address_street
       t.string :address_building
+
+      # 緯度・経度情報を格納するカラムを追加
+      t.float :latitude
+      t.float :longitude
     end
 
     add_index :users, :email,                unique: true
