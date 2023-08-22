@@ -31,8 +31,8 @@ class UsersController < ApplicationController
   end
 
   private
-
+  # ストロングパラメーターに住所関連のカラムを追加
   def user_params
-    params.require(:user).permit(:name, :profile_image, :introduction)
+    params.require(:user).permit(:name, :profile_image, :introduction, :email, :postcode, :prefecture_code, :address_city, :address_street, :address_building)
   end
 end

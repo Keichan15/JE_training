@@ -11,6 +11,22 @@
       <th>introduction</th>
       <th><%= user.introduction %></th>
     </tr>
+
+    <% if user == current_user %>
+      <tr>
+        <th>Mail address</th>
+        <th><%= user.email %></th>
+      </tr>
+      <tr>
+        <th>post_code</th>
+        <th><%= user.postcode %></th>
+      </tr>
+      <tr>
+        <th>address</th>
+        <th><%= user.join_address %></th>
+      </tr>
+    <% end %>
+
     <tr>
       <th>follows</th>
       <th><%= link_to user.following_user.count, user_followings_path(user) %></th>

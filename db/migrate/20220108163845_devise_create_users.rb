@@ -35,6 +35,13 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :name
       t.text :introduction
       t.timestamps null: false
+
+      # 住所関連のカラムを追加
+      t.integer :postcode
+      t.integer :prefecture_code
+      t.string :address_city
+      t.string :address_street
+      t.string :address_building
     end
 
     add_index :users, :email,                unique: true
