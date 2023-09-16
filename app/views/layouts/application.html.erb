@@ -62,6 +62,11 @@
                     <i class="fas fa-sign-in-alt"></i>Log in
                   <% end %>
                 </li>
+                <li>
+                  <%= link_to users_guest_sign_in_path,  class: 'nav-link text-light', method: :post do %>
+                    <i class="fas fa-sign-in-alt"></i>Guest Log in
+                  <% end %>
+                </li>
               <% end %>
             </ul>
           </div>
