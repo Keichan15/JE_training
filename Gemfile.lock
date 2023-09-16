@@ -127,7 +127,6 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.16.2)
     msgpack (1.5.4)
-    mysql2 (0.5.4)
     net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
@@ -223,6 +222,8 @@ GEM
       sprockets-rails
       tilt
     semantic_range (3.0.0)
+    simple_calendar (3.0.2)
+      rails (>= 6.1)
     spring (4.0.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
@@ -273,7 +274,6 @@ DEPENDENCIES
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)
-  mysql2
   net-imap
   net-pop
   net-smtp
@@ -283,6 +283,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.4)
   rspec-rails
   sass-rails (>= 6)
+  simple_calendar
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)

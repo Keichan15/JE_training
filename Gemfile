@@ -60,6 +60,8 @@ gem "net-pop"
 gem "net-imap"
 
 gem 'dotenv-rails'
+
+gem 'simple_calendar'
 # group :production do
 #   gem 'mysql2'
 # end
